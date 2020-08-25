@@ -1,6 +1,5 @@
 ---
-category: 简介
-order: 1
+order: 100
 title: 本书作者
 ---
 
