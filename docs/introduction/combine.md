@@ -1,5 +1,5 @@
 ---
-category: 概率论笔记
+category: 概率论与数理统计
 order: 5
 title: 排列
 ---

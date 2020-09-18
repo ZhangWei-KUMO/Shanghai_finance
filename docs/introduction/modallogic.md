@@ -1,5 +1,5 @@
 ---
-category: 概率论笔记
+category: 概率论与数理统计
 order: 2
 title: 模态逻辑 Modal Logic
 ---
