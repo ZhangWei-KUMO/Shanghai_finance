@@ -1,5 +1,5 @@
 ---
-category: 简介
+category: 概率论笔记
 order: 1
 title: 可能世界 Possible World
 ---

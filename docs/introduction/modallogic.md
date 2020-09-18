@@ -1,5 +1,5 @@
 ---
-category: 简介
+category: 概率论笔记
 order: 2
 title: 模态逻辑 Modal Logic
 ---

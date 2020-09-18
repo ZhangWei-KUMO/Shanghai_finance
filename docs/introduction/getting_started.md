@@ -1,5 +1,5 @@
 ---
-category: 简介
+category: 概率论笔记
 order: 0
 title: 前言
 ---

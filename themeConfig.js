@@ -1,19 +1,16 @@
 const baseConfig = {
   logo: "https://test-1253763202.cos.ap-shanghai.myqcloud.com/docs/js/probability.png",
-  projectName: "概率论与数理统计",
+  projectName: "上财同等学力2020级经济统计学",
   homeUrl: "/getting-started-cn.html",
   library: "https://github.com/ZhangWei-KUMO/js-advanced"
 };
 
 const themeConfig = {
   categoryOrder: {
-    简介: 0,
-    基础算法: 1,
-    异步调用: 2,
-    链表: 3,
-    二叉树: 4,
-    回溯算法: 5,
-    数学公式: 10,
+    课程表: 0,
+    社会主义经济理论: 1,
+    概率论与数理统计: 2,
+    货币银行学: 3
   },
   typeOrder: {
     "必考点": 1

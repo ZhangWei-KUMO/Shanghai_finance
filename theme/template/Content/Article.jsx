@@ -29,7 +29,7 @@ export default class Article extends React.Component {
       executeSdk(href);
       wx.ready(() => {
         // 分享文章给朋友
-        updateAppMessageShareData(href, title, config.baseConfig.logo, "概率论与数理统计");
+        updateAppMessageShareData(href, title, config.baseConfig.logo, "上财同等学力2020级经济统计学");
         // 分享文章到朋友圈
         updateTimelineShareData(href, title, config.baseConfig.logo);
       });
@@ -47,7 +47,7 @@ export default class Article extends React.Component {
         executeSdk(href);
         wx.ready(() => {
           // 分享文章给朋友
-          updateAppMessageShareData(href, title, config.baseConfig.logo, "概率论与数理统计");
+          updateAppMessageShareData(href, title, config.baseConfig.logo, "上财同等学力2020级经济统计学");
           // 分享文章到朋友圈
           updateTimelineShareData(href, title, config.baseConfig.logo);
         });

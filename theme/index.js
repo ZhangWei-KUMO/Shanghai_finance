@@ -3,6 +3,8 @@
  */
 // 导入两个页面模板，一个主页，一个文档
 const contentTmpl = "./template/Content/index";
+// 首页
+const homeTmpl = "./template/index";
 
 function pickerGenerator(module) {
   const tester = new RegExp(`${module}`);
@@ -35,9 +37,13 @@ module.exports = {
     component: "./template/Layout/index",
     indexRoute: {
       path: "/docs/introduction/getting_started",
-      component: contentTmpl
+      component: homeTmpl
     },
     childRoutes: [
+      {
+        path: "docs/:module",
+        component: contentTmpl
+      },
       {
         path: "docs/:module/:compt/:children",
         component: contentTmpl
