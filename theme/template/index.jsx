@@ -7,7 +7,7 @@ export default function NotFound({ location }) {
   return (
     <div id="page-404">
       <section>
-        <h2>上海财经大学<br />&nbsp;&nbsp;同等学力2020级经济统计学研修班学习笔记</h2>
+        <h2>上海财经大学<br />&nbsp;&nbsp;同等学力2020级经济统计学学习笔记</h2>
         <p style={{ marginTop: 100 }}>
           <Link to={zhCn.messages["app.home.url"]}>
             点击进入
