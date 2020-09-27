@@ -1,6 +1,6 @@
 {
   "name": "probability",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "probability",
   "main": "index.js",
   "private": true,
