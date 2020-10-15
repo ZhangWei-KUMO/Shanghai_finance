@@ -48,5 +48,8 @@ title: 函数的极值与曲率
 
 ![](https://latex.codecogs.com/svg.latex?p_{min}=0)
 
+## 曲率
 
+弧微分![](https://latex.codecogs.com/svg.latex?\Delta s)
+公式：![](https://latex.codecogs.com/svg.latex?ds=\sqrt{1+y'^2} dx)
 
