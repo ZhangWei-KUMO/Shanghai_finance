@@ -58,20 +58,20 @@ class MainContent extends Component {
       mobileMenuState: !mobileMenuState
     });
   };
-  componentDidMount() {
-    const { href } = window.location;
-    const { meta, description } = content;
-    const { title, subtitle } = meta;
-    if (window.location.host !== "localhost:8000") {
-      executeSdk(href);
-      wx.ready(() => {
-        // 分享文章给朋友
-        updateAppMessageShareData(href, title, config.baseConfig.logo, "");
-        // 分享文章到朋友圈
-        updateTimelineShareData(href, title, config.baseConfig.logo);
-      });
-    }
-  }
+  // componentDidMount() {
+  //   const { href } = window.location;
+  //   const { meta, description } = content;
+  //   const { title, subtitle } = meta;
+  //   if (window.location.host !== "localhost:8000") {
+  //     executeSdk(href);
+  //     wx.ready(() => {
+  //       // 分享文章给朋友
+  //       updateAppMessageShareData(href, title, config.baseConfig.logo, "");
+  //       // 分享文章到朋友圈
+  //       updateTimelineShareData(href, title, config.baseConfig.logo);
+  //     });
+  //   }
+  // }
   componentDidUpdate(prevProps) {
     const { location } = this.props;
     const { location: prevLocation = {} } = prevProps || {};
