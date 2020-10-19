@@ -59,6 +59,9 @@ class MainContent extends Component {
     });
   };
   componentDidMount() {
+    const { href } = window.location;
+    const { meta, description } = content;
+    const { title, subtitle } = meta;
     if (window.location.host !== "localhost:8000") {
       executeSdk(href);
       wx.ready(() => {
