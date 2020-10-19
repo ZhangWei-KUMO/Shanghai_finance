@@ -14,12 +14,12 @@ class Header extends React.Component {
       <header id="header" className={headerClassName}>
         <Row>
           <Col xxl={4} xl={5} lg={5} md={5} sm={24} xs={24}>
-            <a href="/" id="logo">
+            <Link to="/" id="logo">
               <img alt="logo" src={config.baseConfig.logo} />
               <span style={{ fontSize: "20px", color: "#444", lineHeight: "60px" }}>
                 {config.baseConfig.projectName}
               </span>
-            </a>
+            </Link>
           </Col>
           <Col xxl={20} xl={19} lg={19} md={19} sm={0} xs={0}>
             <div className="tools-bar">
