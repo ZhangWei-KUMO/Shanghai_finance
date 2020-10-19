@@ -55,7 +55,7 @@ class MainContent extends Component {
     let { mobileMenuState } = this.state;
     this.setState({
       openKeys,
-      mobileMenuState: !mobileMenuState
+      // mobileMenuState: !mobileMenuState
     });
   };
   // componentDidMount() {
