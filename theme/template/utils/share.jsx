@@ -2,7 +2,7 @@
 export function updateAppMessageShareData(link, title, imgUrl, desc = "") {
   wx.ready(() => {
     wx.updateAppMessageShareData({
-      title: `${title}- 上财同等学力2020级经济统计学`,
+      title: `${title}- 经计栈`,
       desc,
       link,
       imgUrl,
@@ -17,7 +17,7 @@ export function updateAppMessageShareData(link, title, imgUrl, desc = "") {
 export function updateTimelineShareData(link, title, imgUrl) {
   wx.ready(() => {
     wx.updateTimelineShareData({
-      title: `${title} - 上财同等学力2020级经济统计学`,
+      title: `${title} - 经计栈`,
       link,
       imgUrl,
       success() {

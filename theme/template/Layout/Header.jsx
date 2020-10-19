@@ -14,9 +14,9 @@ class Header extends React.Component {
       <header id="header" className={headerClassName}>
         <Row>
           <Col xxl={4} xl={5} lg={5} md={5} sm={24} xs={24}>
-            <a to="#" id="logo">
+            <a href="/" id="logo">
               <img alt="logo" src={config.baseConfig.logo} />
-              <span style={{ fontSize: "17px", color: "#000" }}>
+              <span style={{ fontSize: "20px", color: "#444", lineHeight: "60px" }}>
                 {config.baseConfig.projectName}
               </span>
             </a>
