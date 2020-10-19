@@ -15,6 +15,7 @@ import getModuleData from "../utils/getModuleData";
 import getMenuItems from "../utils";
 import { getActiveMenuItem, fileNameToPath, getSideBarOpenKeys } from "../utils/handleMenu";
 import { getFooterNav, bindScroller } from "../utils/menu";
+import config from "../../../bisheng.config";
 
 const Article = React.lazy(() => import("./Article"));
 
@@ -25,7 +26,8 @@ class MainContent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      openKeys: undefined
+      openKeys: undefined,
+      mobileMenuState: false
     };
   }
   static getDerivedStateFromProps(props, state) {
@@ -40,7 +42,12 @@ class MainContent extends Component {
     return null;
   }
 
-
+  trigger = () => {
+    let { mobileMenuState } = this.state;
+    this.setState({
+      mobileMenuState: !mobileMenuState
+    })
+  }
   componentDidUpdate(prevProps) {
     const { location } = this.props;
     const { location: prevLocation = {} } = prevProps || {};
@@ -116,10 +123,11 @@ class MainContent extends Component {
 
   render() {
     const { localizedPageData, demos } = this.props;
-    const { isMobile } = this.context;
-    const { openKeys } = this.state;
+    const { openKeys, mobileMenuState } = this.state;
     const activeMenuItem = getActiveMenuItem(this.props);
-
+    const headerClassName = classNames({
+      clearfix: true
+    });
     const menuItems = this.getMenuItem();
     const menuItemsForFooterNav = this.getMenuItem({
       before: <Icon className="footer-nav-icon-before" type="left" />,
@@ -143,23 +151,44 @@ class MainContent extends Component {
       </Menu>
     );
     return (
-      <div className="main-wrapper">
-        <Row>
-          {isMobile ? null : (
-            <Col xxl={4} xl={5} lg={6} md={24} sm={24} xs={24} className="main-menu">
+      <div>
+        <header id="header" className={headerClassName}>
+          <Row>
+            <Col xxl={0} xl={0} lg={0} md={20} sm={20} xs={20}>
+              <Link to="/" id="logo">
+                <img alt="logo" src={config.baseConfig.logo} />
+                <span style={{ fontSize: "20px", color: "#444", lineHeight: "60px" }}>
+                  {config.baseConfig.projectName}
+                </span>
+              </Link>
+            </Col>
+            <Col xxl={0} xl={0} lg={0} md={4} sm={4} xs={4}>
+              <div className="tools-bar" onClick={() => this.trigger()}>
+                {mobileMenuState ?
+                  <Icon className="footer-nav-icon-before" type="close" style={{ fontSize: '22px' }} />
+                  : <Icon className="footer-nav-icon-before" type="menu-fold" style={{ fontSize: '22px' }} />
+                }
+              </div>
+            </Col>
+          </Row>
+        </header>
+        <div className="main-wrapper">
+          <Row>
+            <Col xxl={4} xl={5} lg={6} md={mobileMenuState ? 24 : 0} sm={mobileMenuState ? 24 : 0} xs={mobileMenuState ? 24 : 0} className="main-menu">
               <section className="main-menu-inner">{menuChild}</section>
             </Col>
-          )}
-          <Col xxl={20} xl={19} lg={18} md={24} sm={24} xs={24}>
-            <Suspense fallback={<div>Loading...</div>}>
-              <section className={mainContainerClass}>
-                <Article {...this.props} content={localizedPageData} />
-              </section>
-              <PrevAndNext prev={prev} next={next} />
-            </Suspense>
-            <Footer />
-          </Col>
-        </Row>
+
+            <Col xxl={20} xl={19} lg={18} md={24} sm={24} xs={24}>
+              <Suspense fallback={<div>Loading...</div>}>
+                <section className={mainContainerClass}>
+                  <Article {...this.props} content={localizedPageData} />
+                </section>
+                <PrevAndNext prev={prev} next={next} />
+              </Suspense>
+              <Footer />
+            </Col>
+          </Row>
+        </div>
       </div>
     );
   }
