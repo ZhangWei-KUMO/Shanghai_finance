@@ -101,5 +101,13 @@ title: 定积分
 
 带入公式得出π/6。
 
+### 积分上限函数及其导数
+
+积分上限函数在经济学的应用意义在于，当面对单一曲线的时候随机截取一段计算该曲面的积分。
+
+> 在计算定积分值的时候要考虑其下限是否为0。如果为0直接计算积分，如果不为0，要减去下限与0的区间积分值。
+
+对于积分上限函数的导数并不会写成![](https://latex.codecogs.com/svg.latex?\frac{dy}{dx}) ,为了强调y的积分上限的**函数性质**，会写成![](https://latex.codecogs.com/svg.latex?\frac{d}{dx}f(x))
 
 
+![](https://self-1253763202.cos.ap-chengdu.myqcloud.com/applications/shangcai/up_limit.jpg)
