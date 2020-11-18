@@ -2,7 +2,7 @@ const baseConfig = {
   logo: "https://self-1253763202.cos.ap-chengdu.myqcloud.com/applications/shangcai/logo.jpg",
   projectName: "经计栈",
   projectNameLogo: "https://self-1253763202.cos.ap-chengdu.myqcloud.com/applications/shangcai/logo_text.jpg",
-  homeUrl: "/getting-started-cn.html",
+  homeUrl: "/index.html",
   library: "https://github.com/ZhangWei-KUMO/js-advanced"
 };
 
