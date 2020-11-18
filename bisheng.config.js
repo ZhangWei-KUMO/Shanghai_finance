@@ -43,7 +43,7 @@ const babelConfig = {
 };
 
 module.exports = {
-  root: ENV === "production" ? "/probability/" : "/",
+  root: ENV === "production" ? "/" : "/",
   devtool: ENV === "production" ? "cheap-module-source-map" : "cheap-module-eval-source-map",
   webpackConfig(config) {
     config.node = {
